@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RajaMinyak - Top Up Game</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>RajaMinyak</h1>
+    <p>Top Up Game Favorit Kamu di Sini!</p>
+  </header>
+  <main>
+    <div class="game-list">
+      <div class="game-card" onclick="location.href='genshin.html'">
+        <img src="genshin.jpg" onclick="event.stopPropagation(); showPopup('genshin.jpg')" />
+        <h3>Genshin Impact</h3>
+      </div>
+      <div class="game-card" onclick="location.href='deltaforce.html'">
+        <img src="deltaforce.jpg" onclick="event.stopPropagation(); showPopup('deltaforce.jpg')" />
+        <h3>Delta Force</h3>
+      </div>
+      <div class="game-card" onclick="location.href='honkai.html'">
+        <img src="honkai.jpg" onclick="event.stopPropagation(); showPopup('honkai.jpg')" />
+        <h3>Honkai Impact</h3>
+      </div>
+      <div class="game-card" onclick="location.href='freefire.html'">
+        <img src="freefire.jpg" onclick="event.stopPropagation(); showPopup('freefire.jpg')" />
+        <h3>Free Fire</h3>
+      </div>
+    </div>
+  </main>
+  <div id="popup" class="popup" onclick="closePopup()">
+    <img id="popup-img" src="">
+  </div>
+</body>
+</html>
