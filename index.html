@@ -1,11 +1,10 @@
 
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RajaMinyak - Top Up Game</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
 </head>
 <body>
   <header>
@@ -13,27 +12,13 @@
     <p>Top Up Game Favorit Kamu di Sini!</p>
   </header>
   <main>
-    <div class="carousel-container">
-      <div class="carousel-slide" id="carousel-slide">
-        <img src="banner1.png" alt="Promo 1">
-        <img src="banner2.jpg" alt="Promo 2">
-      </div>
-      <button class="nav left" onclick="moveSlide(-1)">❮</button>
-      <button class="nav right" onclick="moveSlide(1)">❯</button>
-      <div class="dots">
-        <span class="dot" onclick="currentSlide(0)"></span>
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-      </div>
-    </div>
-
     <div class="game-list">
-      <div class="game-card">
-        <img src="assets/images/genshin.jpg" alt="Genshin Impact">
+      <div class="game-card" onclick="location.href='genshin.html'">
+        <img src="genshin.jpg" onclick="event.stopPropagation(); showPopup('genshin.jpg')" />
         <h3>Genshin Impact</h3>
       </div>
-       <div class="game-card">
-        <img src="assets/images/deltaforce.jpg" alt="Genshin Impact">
+      <div class="game-card" onclick="location.href='deltaforce.html'">
+        <img src="deltaforce.jpg" onclick="event.stopPropagation(); showPopup('deltaforce.jpg')" />
         <h3>Delta Force</h3>
       </div>
       <div class="game-card" onclick="location.href='honkai.html'">
@@ -58,7 +43,8 @@
       </div>
     </div>
   </main>
-  <script src="script.js"></script>
+  <div id="popup" class="popup" onclick="closePopup()">
+    <img id="popup-img" src="">
+  </div>
 </body>
 </html>
-
